@@ -1,10 +1,11 @@
 import React from "react";
 import salmon from "../../assets/salmon.jpg";
 import { Link } from "react-router-dom";
+import styles from "./AdBanner.module.css";
 
 const AdBanner = () => {
   return (
-    <div
+    <div className={styles.ad_banner}
       style={{
         background: `linear-gradient(
           190deg,
@@ -14,7 +15,7 @@ const AdBanner = () => {
         backgroundSize: "cover",
       }}
     >
-      <div>
+      <div className={styles.ad_text}>
         <h3>New Recipe</h3>
         <h1>Pineapple Salmon</h1>
         <h3>
