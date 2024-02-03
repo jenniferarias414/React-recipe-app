@@ -24,7 +24,9 @@ const DetailScreen = () => {
             <h4>Prep Time: {recipe.prep_time}</h4>
             <h4>Cook Time: {recipe.cook_time}</h4>
             <h4>Serves: {recipe.serves}</h4>
-            {/* <br/> */}
+            
+            <hr/>
+
             <h2>Ingredients</h2>
             {recipe.ingredients && recipe.ingredients.map((ing, index) => {
               return <h4>{ing.quantity} {ing.ingredient}</h4>
