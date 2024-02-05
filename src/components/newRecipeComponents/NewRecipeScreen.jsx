@@ -65,6 +65,13 @@ const NewRecipeScreen = () => {
   //     });
   //   }
   // };
+  const ingredientDisplay = ingredients.map((ing) => {
+    return (
+      <li>
+        {ing.quantity} {ing.name}
+      </li>
+    );
+  });
 
   return (
     <section>
@@ -164,7 +171,7 @@ const NewRecipeScreen = () => {
               value={quantity}
               onChange={(e) => setQuantity(e.target.value)}
             />
-
+            <ul>{ingredientDisplay}</ul>
             <button type="button" onClick={handleIngredientAdd}>
               Add Another
             </button>
