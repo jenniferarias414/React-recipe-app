@@ -44,24 +44,29 @@ const NewRecipeScreen = () => {
       <h1>Tell us about your Recipe!</h1>
       {/* Here you will have a large form. Be prepared, part 4 will have you build this form in detail, and part 5 will have you style it. Do your best! */}
       <form>
-      <label>
-        <input type="text" placeholder='Recipe Name'name="recipeName" value={formData.recipeName} onChange={handleChange} />
-      </label>
+        <input
+          type="text"
+          placeholder="Recipe Name"
+          name="recipeName"
+          value={formData.recipeName}
+          onChange={handleChange}
+        />
 
-      <label>
-        
-        <input type="text" placeholder='Image URL' name="imageURL" value={formData.imageURL} onChange={handleChange} />
-      </label>
+        <input
+          type="text"
+          placeholder="Image URL"
+          name="imageURL"
+          value={formData.imageURL}
+          onChange={handleChange}
+        />
 
-      <label>
-        
         <label>
           Cook
           <input
             type="radio"
             name="cookingMethod"
             value="Cook"
-            checked={formData.cookingMethod === 'Cook'}
+            checked={formData.cookingMethod === "Cook"}
             onChange={handleChange}
           />
         </label>
@@ -71,7 +76,7 @@ const NewRecipeScreen = () => {
             type="radio"
             name="cookingMethod"
             value="Bake"
-            checked={formData.cookingMethod === 'Bake'}
+            checked={formData.cookingMethod === "Bake"}
             onChange={handleChange}
           />
         </label>
@@ -81,52 +86,65 @@ const NewRecipeScreen = () => {
             type="radio"
             name="cookingMethod"
             value="Drink"
-            checked={formData.cookingMethod === 'Drink'}
+            checked={formData.cookingMethod === "Drink"}
             onChange={handleChange}
           />
         </label>
-      </label>
 
-      <label>
-        <input type="text" placeholder= 'Prep Time' name="prepTime" value={formData.prepTime} onChange={handleChange} />
-      </label>
+        <input
+          type="text"
+          placeholder="Prep Time"
+          name="prepTime"
+          value={formData.prepTime}
+          onChange={handleChange}
+        />
 
-      <label>
-       
-        <input type="text" placeholder='Cook Time' name="cookTime" value={formData.cookTime} onChange={handleChange} />
-      </label>
+        <input
+          type="text"
+          placeholder="Cook Time"
+          name="cookTime"
+          value={formData.cookTime}
+          onChange={handleChange}
+        />
 
-      <label>
-       
-        <input type="text" placeholder='Serves' name="serves" value={formData.serves} onChange={handleChange} />
-      </label>
+        <input
+          type="text"
+          placeholder="Serves"
+          name="serves"
+          value={formData.serves}
+          onChange={handleChange}
+        />
 
-      <label>
-        
-        <input type="text" placeholder='Ingredient' name="ingredient" value={formData.ingredient} onChange={handleChange} />
-      </label>
+        <input
+          type="text"
+          placeholder="Ingredient"
+          name="ingredient"
+          value={formData.ingredient}
+          onChange={handleChange}
+        />
 
-      <label>
-        
-        <input type="text" placeholder='Quantity' name="quantity" value={formData.quantity} onChange={handleChange} />
-      </label>
+        <input
+          type="text"
+          placeholder="Quantity"
+          name="quantity"
+          value={formData.quantity}
+          onChange={handleChange}
+        />
 
-      <button type="button" onClick={handleIngredientAdd}>
-        Add Another
-      </button>
+        <button type="button" onClick={handleIngredientAdd}>
+          Add Another
+        </button>
 
-      <label>
         <textarea
           name="instructions"
-          placeholder='What are the instructions?'
+          placeholder="What are the instructions?"
           value={formData.instructions}
           onChange={handleChange}
         ></textarea>
-      </label>
 
-      {/* Add submit button here */}
-      <button type="submit">Save</button>
-    </form>
+        {/* Add submit button here */}
+        <button type="submit">Save</button>
+      </form>
     </section>
   );
 };
