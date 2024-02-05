@@ -84,7 +84,7 @@ const NewRecipeScreen = () => {
 
   return (
     <section>
-      <h1>Tell us about your Recipe!</h1>
+      <h1 className={styles.h1} >Tell us about your Recipe!</h1>
       {/* Here you will have a large form. Be prepared, part 4 will have you build this form in detail, and part 5 will have you style it. Do your best! */}
       <Formik initialValues={initialValues} onSubmit={onSubmit}>
         {({ values, handleChange, handleSubmit }) => (
@@ -112,7 +112,7 @@ const NewRecipeScreen = () => {
               Cook
               <input
                 type="radio"
-                name="cookingMethod"
+                name="type"
                 value="Cook"
                 // checked={formData.cookingMethod === "Cook"}
                 onChange={handleChange}
@@ -122,7 +122,7 @@ const NewRecipeScreen = () => {
               Bake
               <input
                 type="radio"
-                name="cookingMethod"
+                name="type"
                 value="Bake"
                 // checked={formData.cookingMethod === "Bake"}
                 onChange={handleChange}
@@ -134,7 +134,7 @@ const NewRecipeScreen = () => {
                 type="radio"
                 value="Drink"
                 onChange={handleChange}
-                name="cookingMethod"
+                name="type"
 
                 // checked={formData.cookingMethod === "Drink"}
               />

@@ -24,7 +24,7 @@ const DetailScreen = () => {
             <h4>Prep Time: {recipe.prep_time}</h4>
             <h4>Cook Time: {recipe.cook_time}</h4>
             <h4>Serves: {recipe.serves}</h4>
-            
+
             <hr/>
 
             <h2>Ingredients</h2>
@@ -36,7 +36,8 @@ const DetailScreen = () => {
         <div className={styles.instruction_container}>
           <h2>Instructions</h2>
           <p style={{ whiteSpace: "pre-wrap" }}>
-            {recipe.instructions && JSON.parse(recipe.instructions)}
+            {recipe.instructions } 
+            {/* && JSON.parse(recipe.instructions) */}
           </p>
         </div>
       </div>
