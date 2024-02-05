@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './NewRecipe.module.css';
 import { Formik } from "formik";
+import { ImDrive } from 'react-icons/im';
 
 
 
@@ -80,6 +81,7 @@ const NewRecipeScreen = () => {
       <Formik initialValues={initialValues} onSubmit={onSubmit}>
         {({ values, handleChange, handleSubmit }) => (
           <form onSubmit={handleSubmit}>
+            <div className={styles.title_container}>
             <input
               type="text"
               placeholder="Recipe Name"
@@ -95,7 +97,9 @@ const NewRecipeScreen = () => {
               value={values.imageURL}
               onChange={handleChange}
             />
+            </div>
 
+            <div className={styles.radio_container}>
             <label>
               Cook
               <input
@@ -127,7 +131,9 @@ const NewRecipeScreen = () => {
                 // checked={formData.cookingMethod === "Drink"}
               />
             </label>
+            </div>
 
+            <div className={styles.input_container}>
             <input
               type="text"
               placeholder="Prep Time"
@@ -151,7 +157,10 @@ const NewRecipeScreen = () => {
               value={values.serves}
               onChange={handleChange}
             />
+            </div>
 
+            <div className={styles.input_container}>
+            <div className={styles.ingredient_inputs}>
             <input
               type="text"
               placeholder="Ingredient"
@@ -171,20 +180,25 @@ const NewRecipeScreen = () => {
               value={quantity}
               onChange={(e) => setQuantity(e.target.value)}
             />
+            </div>
             <ul>{ingredientDisplay}</ul>
-            <button type="button" onClick={handleIngredientAdd}>
+
+            </div>
+
+            <button type="button" className={styles.orange_btn} onClick={handleIngredientAdd}>
               Add Another
             </button>
 
             <textarea
               name="instructions"
+              rows={7}
               placeholder="What are the instructions?"
               value={values.instructions}
               onChange={handleChange}
             ></textarea>
 
             {/* Add submit button here */}
-            <button type="submit">Save</button>
+            <button type="submit" className={styles.green_btn} >Save</button>
           </form>
         )}
       </Formik>

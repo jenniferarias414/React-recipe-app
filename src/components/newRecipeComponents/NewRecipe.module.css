@@ -50,7 +50,6 @@ section {
   }
   
   ul {
-    list-style-type: none;
     padding: 0;
     margin: 10px 0;
   }
@@ -68,8 +67,53 @@ section {
     cursor: pointer;
   }
   
-  button:hover {
+  /* button:hover {
     background-color: #45a049;
+  } */
+
+  .title_container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .input_container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 20px;
+  }
+
+  .radio_container {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+  }
+
+  .ingredient_inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      width: 50%;
+  }
+
+  ul {
+    width: 50%;
+    display: flex;
+      justify-content: center;
+  }
+
+  .orange_btn{
+    background-color: #FF8C00;
+   
+    margin-bottom: 20px;
+  }
+
+  .green_btn{
+    background-color: #588b8a;
+    width: 130px;
   }
   
   
