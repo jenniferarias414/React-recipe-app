@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import styles from './NewRecipe.module.css';
 import { Formik } from "formik";
-import { ImDrive } from 'react-icons/im';
-
+import axios from 'axios';
 
 
 const NewRecipeScreen = () => {
@@ -30,7 +29,16 @@ const NewRecipeScreen = () => {
   const onSubmit = (values) => {
     values.ingredients = ingredients;
     console.log(values);
+    axios
+    .post(`https://recipes.devmountain.com/recipes`, values)
+    .then((res) => {
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   };
+ 
 
   // const [formData, setFormData] = useState({
   //   recipeName: "",
@@ -197,7 +205,7 @@ const NewRecipeScreen = () => {
               onChange={handleChange}
             ></textarea>
 
-            {/* Add submit button here */}
+            
             <button type="submit" className={styles.green_btn} >Save</button>
           </form>
         )}
